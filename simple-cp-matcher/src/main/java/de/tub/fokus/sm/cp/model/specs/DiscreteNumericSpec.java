@@ -17,6 +17,11 @@ public class DiscreteNumericSpec extends TresorQoSSpec {
 
 	@Override
 	public String toString() {
-		return value + "";
+
+		String toreturn = value + "";
+		toreturn += " ranking: " + ranking + " matching degree: "
+				+ matchingDegree;
+		return toreturn;
+
 	}
 }

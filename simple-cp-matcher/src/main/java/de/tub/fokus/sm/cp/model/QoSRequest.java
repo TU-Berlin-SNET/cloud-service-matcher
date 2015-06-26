@@ -154,6 +154,8 @@ public class QoSRequest {
 		// each solution is a serviceindex. so the service index is the index to
 		// increment ranking from list of service descriptions
 
+		
+		//TODO check what the solutions look like to understand this 
 		int noOfSolutions;
 		int[] matchingServiceIndexes = new int[solutions.size()];
 		int i = 0;
@@ -161,11 +163,11 @@ public class QoSRequest {
 			noOfSolutions = solution.getNumberOfVars();
 			if (noOfSolutions > 0)
 				// expecting only one value in each solution with index 0 in
-				// intresults
+				// int results
 				matchingServiceIndexes[i++] = solution.getValue(0);
 		}
 
-		// evaluate exact for each discretenumericspec of this service.
+		// evaluate exact for each discretenumericspec of the services with the matching service indexes.
 		for (int j = 0; j < matchingServiceIndexes.length; j++) {
 			LOGGER.debug("matching service index no " + j + " :"
 					+ matchingServiceIndexes[j] + "\n");
@@ -178,6 +180,8 @@ public class QoSRequest {
 				}
 			}
 		}
+		
+	
 
 	}
 }

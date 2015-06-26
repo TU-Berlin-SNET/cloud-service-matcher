@@ -1,5 +1,6 @@
 package de.tub.fokus.sm.cp.model.specs;
 
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -9,10 +10,11 @@ import de.tub.fokus.sm.cp.model.evaluator.FailEvaluator;
 import de.tub.fokus.sm.cp.model.evaluator.NoSpecEvaluator;
 import de.tub.fokus.sm.cp.model.evaluator.PartialEvaluator;
 import de.tub.fokus.sm.cp.model.evaluator.SuperEvaluator;
+import de.tub.fokus.sm.cp.model.specs.QoSSpec.MatchingDegree;
 
 public abstract class TresorQoSSpec implements QoSSpec {
 	protected int ranking;
-	protected MatchingDegree matchingDegree;
+	protected MatchingDegree matchingDegree = MatchingDegree.FAIL ;
 	Map<Integer, Evaluator> evaluators;
 
 	public TresorQoSSpec() {
@@ -62,4 +64,6 @@ public abstract class TresorQoSSpec implements QoSSpec {
 		matchingDegree = m;
 	}
 
+	
+	
 }

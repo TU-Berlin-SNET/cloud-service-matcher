@@ -25,7 +25,7 @@ public class FeatureListSpec extends TresorQoSSpec {
 		String toreturn = "featurelistSpec "
 				+ Arrays.toString(providedFeatureNumberCodes);
 		toreturn += " ranking: " + ranking + " matching degree: "
-				+ matchingDegree + "\n";
+				+ matchingDegree ;
 		return toreturn;
 
 	}
