@@ -40,8 +40,8 @@ public class ServiceDescription {
 
 		for (Entry<String, QoSSpec> entry : specification.entrySet()) {
 			toreturn += " property name: " + entry.getKey()
-					+ ", property itself: " + entry.getValue().toString()
-					+ " ;";
+					+ ", property value: " + entry.getValue().toString()
+					+ " ; \n";
 		}
 		toreturn += "scores: " + calculateRanking();
 		return toreturn;
